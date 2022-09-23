@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no " >
+    <title>Colocar elementos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="contenedor">
+        <!-- justify-content -->
+        <div class="card">
+            <h2 class="titulo">COLOCAR LOS ELEMENTOS FLEXIBLES EN LA DIRECCION DEL EJE PRINCIPAL</h2>
+        <p>La propiedad <strong class="importante">justify-content</strong> establece cómo se distribuyen los elementos flexibles en una línea flexible en la dirección del eje principal.</p>
+    
+            <div class="sintaxis">
+                <div class="html">
+                    <h4 class="titulo">HTML</h4>
+                    <pre>
+&lt;div class="contenedor"&gt;
+    &lt;div&gt;E1&lt;/div&gt;
+    &lt;div&gt;E2&lt;/div&gt;
+&lt;/div&gt;
+                    </pre>
+                </div>
+                <div class="css">
+                    <h4 class="titulo">CSS</h4>
+                    <pre>
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    <strong class="titulo">justify-content: flex-start | flex-end | space-between | center | space-around;</strong> 
+}
+                    </pre>
+                </div>
+            </div>    
+        </div>
+        <div class="card">        
+            <h3>flex-start</h3>    
+            <ul>
+                <li>No existe distancia entre el lado inicial del eje principal y su elemento adyacente. </li>
+                <li>No existe distancia entre los elementos contiguos de una línea</li>
+                <li>Si el contenedor flexible es de una sola línea y es demasiado pequeño para contener todos los elementos, los elementos flexibles se desbordan en dirección del eje principal.</li>
+            </ul>
+            
+            <div class="resumen">
+                <div class="html">
+                    <h4 class="titulo">HTML</h4>
+                    <pre>&lt;div class="contenedor"&gt;<br>   &lt;div&gt;E1&lt;/div&gt;<br>   &lt;div&gt;E2&lt;/div&gt;<br>   &lt;div&gt;E3&lt;/div&gt;<br>   &lt;div&gt;E4&lt;/div&gt;<br>   &lt;div&gt;E5&lt;/div&gt;<br>&lt;/div&gt;</pre>
+                </div>
+                <div class="css">
+                    <h4 class="titulo">CSS</h4>
+                    <pre>.contenedor{<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: wrap;<br>   align-content: flex-start;<br><strong class="importante">  justify-content: flex-start;</strong> [VALOR POR DEFECTO]<br>}</pre>
+                </div>
+                <div class="img">
+                    <img src="img/jc-fs.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            
+            <h3 class="titulo">EJEMPLO</h3>
+            <div class="flex-container container-background-color fc-jc-1">
+                <div class="flex-item background-color-1  item-width-150 item-height-80" >E 1 </div>
+                <div class="flex-item background-color-2  item-width-150 item-height-100">E 2 </div>
+                <div class="flex-item background-color-3  item-width-150 item-height-50" >E 3 </div>
+                <div class="flex-item background-color-4  item-width-150 item-height-100">E 4 </div>
+                <div class="flex-item background-color-5  item-width-150 item-height-60" >E 5 </div>
+                <div class="flex-item background-color-6  item-width-150 item-height-80" >E 6 </div>
+                <div class="flex-item background-color-7  item-width-150 item-height-100">E 7 </div>
+                <div class="flex-item background-color-8  item-width-150 item-height-50" >E 8 </div>
+                <div class="flex-item background-color-9  item-width-150 item-height-100">E 9 </div>
+                <div class="flex-item background-color-10 item-width-150 item-height-100">E 10</div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>flex-end</h3>    
+            <ul>
+                <li>No existe distancia entre el lado final del eje principal y su elemento adyacente.</li>
+                <li>No existe distancia entre los elementos contiguos de una línea.</li>
+                <li>Si el contenedor flexible es de una sola linea y es demasiado pequeño para contener todos los elementos, los elementos flexibles se desbordan en dirección contraria del eje principal.
+                    .</li>
+            </ul>
+            
+            <div class="resumen">
+                <div class="html">
+                    <pre>&lt;div class="contenedor"&gt;<br>   &lt;div&gt;E1&lt;/div&gt;<br>   &lt;div&gt;E2&lt;/div&gt;<br>   &lt;div&gt;E3&lt;/div&gt;<br>   &lt;div&gt;E4&lt;/div&gt;<br>   &lt;div&gt;E5&lt;/div&gt;<br>&lt;/div&gt;</pre>
+                </div>
+                <div class="css">
+                    <pre>.contenedor{<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: wrap;<br>   align-content: flex-start;<br><strong class="importante">  justify-content: flex-end;</strong><br>}</pre>
+                </div>
+                <div class="img">
+                    <img src="img/jc-fe.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            
+            <h3 class="titulo">EJEMPLO</h3>
+            <div class="flex-container container-background-color fc-jc-2">
+                <div class="flex-item background-color-1  item-width-150 item-height-80" >E 1 </div>
+                <div class="flex-item background-color-2  item-width-150 item-height-100">E 2 </div>
+                <div class="flex-item background-color-3  item-width-150 item-height-50" >E 3 </div>
+                <div class="flex-item background-color-4  item-width-150 item-height-100">E 4 </div>
+                <div class="flex-item background-color-5  item-width-150 item-height-60" >E 5 </div>
+                <div class="flex-item background-color-6  item-width-150 item-height-80" >E 6 </div>
+                <div class="flex-item background-color-7  item-width-150 item-height-100">E 7 </div>
+                <div class="flex-item background-color-8  item-width-150 item-height-50" >E 8 </div>
+                <div class="flex-item background-color-9  item-width-150 item-height-100">E 9 </div>
+                <div class="flex-item background-color-10 item-width-150 item-height-100">E 10</div>
+            </div>            
+        </div>
+        <div class="card">
+            <h3>center</h3>    
+            <ul>
+                <li>No existe espacio entre los elementos adyacentes de una línea.</li>
+                <li>La distancia entre los lados del eje principal y sus elementos adyacentes es la misma.</li>
+                <li>Si el contenedor flexible es de una sola línea y  es demasiado pequeño para contener todos los elementos, los elementos flexibles se desbordan por igual en ambas direcciones.</li>
+            </ul>
+            <div class="resumen">
+                <div class="html">
+                    <pre>&lt;div class="contenedor"&gt;<br>   &lt;div&gt;E1&lt;/div&gt;<br>   &lt;div&gt;E2&lt;/div&gt;<br>   &lt;div&gt;E3&lt;/div&gt;<br>   &lt;div&gt;E4&lt;/div&gt;<br>   &lt;div&gt;E5&lt;/div&gt;<br>&lt;/div&gt;</pre>
+                </div>
+                <div class="css">
+                    <pre>.contenedor{<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: wrap;<br>   align-content: flex-start;<br><strong class="importante">  justify-content: center;</strong><br>}</pre>
+                </div>
+                <div class="img">
+                    <img src="img/jc-c.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            
+            <h3 class="titulo">EJEMPLO</h3>
+            <div class="flex-container container-background-color fc-jc-3">
+                <div class="flex-item background-color-1  item-width-150 item-height-80" >E 1 </div>
+                <div class="flex-item background-color-2  item-width-150 item-height-100">E 2 </div>
+                <div class="flex-item background-color-3  item-width-150 item-height-50" >E 3 </div>
+                <div class="flex-item background-color-4  item-width-150 item-height-100">E 4 </div>
+                <div class="flex-item background-color-5  item-width-150 item-height-60" >E 5 </div>
+                <div class="flex-item background-color-6  item-width-150 item-height-80" >E 6 </div>
+                <div class="flex-item background-color-7  item-width-150 item-height-100">E 7 </div>
+                <div class="flex-item background-color-8  item-width-150 item-height-50" >E 8 </div>
+                <div class="flex-item background-color-9  item-width-150 item-height-100">E 9 </div>
+                <div class="flex-item background-color-10 item-width-150 item-height-100">E 10</div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>space-between</h3>    
+            <ul>
+                <li>No existe espacio entre los lados del eje principal y sus elementos adyacentes.</li>
+                <li>La distancia entre los elementos adyacentes de una linea es la misma.</li>            
+                <li>Si solo existe un elemento flexible en la línea, este se coloca pegado al lado inicial del eje principal.</li>
+                <li>Si el contenedor flexible es de una sola línea y es demasiado pequeño para contener todos los elementos, los elementos flexibles se desbordan en dirección del eje principal.</li>
+            </ul>
+            
+            <div class="resumen">
+                <div class="html">
+                    <pre>&lt;div class="contenedor"&gt;<br>   &lt;div&gt;E1&lt;/div&gt;<br>   &lt;div&gt;E2&lt;/div&gt;<br>   &lt;div&gt;E3&lt;/div&gt;<br>   &lt;div&gt;E4&lt;/div&gt;<br>   &lt;div&gt;E5&lt;/div&gt;<br>&lt;/div&gt;</pre>
+                </div>
+                <div class="css">
+                    <pre>.contenedor{<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: wrap;<br>   align-content: flex-start;<br><strong class="importante">  justify-content: space-between;</strong><br>}</pre>
+                </div>
+                <div class="img">
+                    <img src="img/jc-sb.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            
+            <h3 class="titulo">EJEMPLO</h3>
+            <div class="flex-container container-background-color fc-jc-4">
+                <div class="flex-item background-color-1  item-width-150 item-height-80" >E 1 </div>
+                <div class="flex-item background-color-2  item-width-150 item-height-100">E 2 </div>
+                <div class="flex-item background-color-3  item-width-150 item-height-50" >E 3 </div>
+                <div class="flex-item background-color-4  item-width-150 item-height-100">E 4 </div>
+                <div class="flex-item background-color-5  item-width-150 item-height-60" >E 5 </div>
+                <div class="flex-item background-color-6  item-width-150 item-height-80" >E 6 </div>
+                <div class="flex-item background-color-7  item-width-150 item-height-100">E 7 </div>
+                <div class="flex-item background-color-8  item-width-150 item-height-50" >E 8 </div>
+                <div class="flex-item background-color-9  item-width-150 item-height-100">E 9 </div>
+                <div class="flex-item background-color-10 item-width-150 item-height-100">E 10</div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>space-around</h3>    
+            <ul>
+                <li>La distancia entre elementos adyacentes de una línea es la misma.</li>
+                <li>La distancia entre los lados del eje principal y sus elementos adyacentes es la mitad de la distancia que existe entre elementos adyacentes.</li>
+                <li>Si solo existe un elemento flexible en la línea, este se coloca al medio.</li>
+                <li>Si el contenedor flexible es demasiado pequeño para contener todos los elementos y es de una sola linea, los elementos flexibles se desbordan por igual en ambas direcciones.</li>
+            </ul>
+            <h3 class="titulo">REGLA CSS</h3>
+            <div class="resumen">
+                <div class="html">
+                    <pre>&lt;div class="contenedor"&gt;<br>   &lt;div&gt;E1&lt;/div&gt;<br>   &lt;div&gt;E2&lt;/div&gt;<br>   &lt;div&gt;E3&lt;/div&gt;<br>   &lt;div&gt;E4&lt;/div&gt;<br>   &lt;div&gt;E5&lt;/div&gt;<br>&lt;/div&gt;</pre>
+                </div>
+                <div class="css">
+                    <pre>.contenedor{<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: wrap;<br>   align-content: flex-start;<br><strong class="importante">  justify-content: space-around;</strong><br>}</pre>
+                </div>
+                <div class="img">
+                    <img src="img/jc-sa.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <p class="nota"><strong>Nota: </strong>Los elementos flexibles se alinean uniformemente de tal manera que el espacio entre dos elementos adyacentes es el mismo. 
+                El espacio anterior al primer elemento y posterior al último elemento equivale a la mitad del espacio entre dos elementos adyacentes.</p>
+            <h3 class="titulo">EJEMPLO</h3>
+            <div class="flex-container container-background-color fc-jc-5">
+                <div class="flex-item background-color-1  item-width-150 item-height-80" >E 1 </div>
+                <div class="flex-item background-color-2  item-width-150 item-height-100">E 2 </div>
+                <div class="flex-item background-color-3  item-width-150 item-height-50" >E 3 </div>
+                <div class="flex-item background-color-4  item-width-150 item-height-100">E 4 </div>
+                <div class="flex-item background-color-5  item-width-150 item-height-60" >E 5 </div>
+                <div class="flex-item background-color-6  item-width-150 item-height-80" >E 6 </div>
+                <div class="flex-item background-color-7  item-width-150 item-height-100">E 7 </div>
+                <div class="flex-item background-color-8  item-width-150 item-height-50" >E 8 </div>
+                <div class="flex-item background-color-9  item-width-150 item-height-100">E 9 </div>
+                <div class="flex-item background-color-10 item-width-150 item-height-100">E 10</div>
+            </div>
+        </div>
+
+
+        <!-- align-items -->
+        <div class="card">
+            <h2 class="titulo">COLOCAR LOS ELEMENTOS FLEXIBLES EN LA DIRECCION DEL EJE TRANSVERSAL</h2>
+            <p>La propiedad <strong class="importante">align-items</strong> establece cómo se distribuyen los elementos flexibles en una línea flexible  en la dirección del eje transversal.</p>
+    
+            <div class="sintaxis">
+                <div class="html">
+                    <h4 class="titulo">HTML</h4>
+                    <pre>
+&lt;div class="contenedor"&gt;
+    &lt;div&gt;E1&lt;/div&gt;
+    &lt;div&gt;E2&lt;/div&gt;
+&lt;/div&gt;
+                    </pre>
+                </div>
+                <div class="css">
+                    <h4 class="titulo">CSS</h4>
+                    <pre>
+.contenedor{
+    display: flex;    
+    <strong class="titulo">align-items: stretch | flex-start | flex-end | center;</strong> 
+}
+                    </pre>
+                </div>
+            </div>    
+        </div>
+        <div class="card">
+            <h3>stretch</h3>    
+            <ul>
+                <li>Los elementos flexibles se estiran para ocupar todo el espacio disponible en la linea flexible en la direccion del eje transversal.</li>
+            </ul>
+            <h3 class="titulo">REGLA CSS</h3>
+            <div class="resumen">
+                <div class="html">
+                    <pre>&lt;div class="contenedor"&gt;<br>   &lt;div&gt;E1&lt;/div&gt;<br>   &lt;div&gt;E2&lt;/div&gt;<br>   &lt;div&gt;E3&lt;/div&gt;<br>   &lt;div&gt;E4&lt;/div&gt;<br>   &lt;div&gt;E5&lt;/div&gt;<br>&lt;/div&gt;</pre>
+                </div>
+                <div class="css">
+                    <pre>.contenedor{<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: wrap;<br>   align-content: flex-start;<br>   justify-content: space-around;<br>   <strong class="importante">align-items: stretch; </strong> [VALOR POR DEFECTO]<br>}</pre>
+                </div>
+                <div class="img">
+                    <img src="img/ai-s.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <h3 class="titulo">EJEMPLO</h3>
+            <div class="flex-container container-background-color fc-ai-4">
+                <div class="flex-item item-width-150 background-color-1  item-height-50">E 1</div>
+                <div class="flex-item item-width-150 background-color-2  item-height-100">E 2</div>
+                <div class="flex-item item-width-150 background-color-3  item-height-60">E 3</div>
+                <div class="flex-item item-width-150 background-color-4  item-height-70">E 4</div>
+                <div class="flex-item item-width-150 background-color-5  item-height-50">E 5</div>
+                <div class="flex-item item-width-150 background-color-6  item-height-90">E 6</div>
+                <div class="flex-item item-width-150 background-color-7  item-height-100">E 7</div>
+                <div class="flex-item item-width-150 background-color-8  item-height-60">E 8</div>
+                <div class="flex-item item-width-150 background-color-9  item-height-90">E 9</div>
+                <div class="flex-item item-width-150 background-color-10 item-height-90">E 10</div>
+                <div class="flex-item item-width-150 background-color-11 item-height-100">E 11</div>
+                <div class="flex-item item-width-150 background-color-12 item-height-60">E 12</div>
+                <div class="flex-item item-width-150 background-color-13 item-height-90">E 13</div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>flex-start</h3>    
+            <ul>
+                <li>Los elementos flexibles están pegados al borde de la línea flexible que se encuentra más cerca del lado inicial del eje transversal.</li>
+            </ul>
+            <h3 class="titulo">REGLA CSS</h3>
+            <div class="resumen">
+                <div class="html">
+                    <pre>&lt;div class="contenedor"&gt;<br>   &lt;div&gt;E1&lt;/div&gt;<br>   &lt;div&gt;E2&lt;/div&gt;<br>   &lt;div&gt;E3&lt;/div&gt;<br>   &lt;div&gt;E4&lt;/div&gt;<br>   &lt;div&gt;E5&lt;/div&gt;<br>&lt;/div&gt;</pre>
+                </div>
+                <div class="css">
+                    <pre>.contenedor{<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: wrap;<br>   align-content: flex-start;<br>   justify-content: space-around;<br>   <strong class="importante">align-items: flex-start; </strong><br>}</pre>
+                </div>
+                <div class="img">
+                    <img src="img/ai-fs.png" alt="" class="img-fluid">
+                </div>
+            </div>    
+            
+            <h3 class="titulo">EJEMPLO</h3>
+            <div class="flex-container container-background-color fc-ai-1">
+                <div class="flex-item item-width-150 background-color-1  item-height-50">E 1</div>
+                <div class="flex-item item-width-150 background-color-2  item-height-100">E 2</div>
+                <div class="flex-item item-width-150 background-color-3  item-height-60">E 3</div>
+                <div class="flex-item item-width-150 background-color-4  item-height-70">E 4</div>
+                <div class="flex-item item-width-150 background-color-5  item-height-50">E 5</div>
+                <div class="flex-item item-width-150 background-color-6  item-height-90">E 6</div>
+                <div class="flex-item item-width-150 background-color-7  item-height-100">E 7</div>
+                <div class="flex-item item-width-150 background-color-8  item-height-60">E 8</div>
+                <div class="flex-item item-width-150 background-color-9  item-height-90">E 9</div>
+                <div class="flex-item item-width-150 background-color-10 item-height-90">E 10</div>
+                <div class="flex-item item-width-150 background-color-11 item-height-100">E 11</div>
+                <div class="flex-item item-width-150 background-color-12 item-height-60">E 12</div>
+                <div class="flex-item item-width-150 background-color-13 item-height-90">E 13</div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>flex-end</h3>    
+            <ul>
+                <li>Los elementos flexibles están pegados al borde de la línea flexible que se encuentra más cerca del lado final del eje transversal.</li>
+            </ul>
+            <h3 class="titulo">REGLA CSS</h3>
+            <div class="resumen">
+                <div class="html">
+                    <pre>&lt;div class="contenedor"&gt;<br>   &lt;div&gt;E1&lt;/div&gt;<br>   &lt;div&gt;E2&lt;/div&gt;<br>   &lt;div&gt;E3&lt;/div&gt;<br>   &lt;div&gt;E4&lt;/div&gt;<br>   &lt;div&gt;E5&lt;/div&gt;<br>&lt;/div&gt;</pre>
+                </div>
+                <div class="css">
+                    <pre>.contenedor{<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: wrap;<br>   align-content: flex-start;<br>   justify-content: space-around;<br>   <strong class="importante">align-items: flex-end; </strong><br>}</pre>
+                </div>
+                <div class="img">
+                    <img src="img/ai-fe.png" alt="" class="img-fluid">
+                </div>
+            </div>            
+
+            <h3 class="titulo">EJEMPLO</h3>
+            <div class="flex-container container-background-color fc-ai-2">
+                <div class="flex-item item-width-150 background-color-1  item-height-50">E 1</div>
+                <div class="flex-item item-width-150 background-color-2  item-height-100">E 2</div>
+                <div class="flex-item item-width-150 background-color-3  item-height-60">E 3</div>
+                <div class="flex-item item-width-150 background-color-4  item-height-70">E 4</div>
+                <div class="flex-item item-width-150 background-color-5  item-height-50">E 5</div>
+                <div class="flex-item item-width-150 background-color-6  item-height-90">E 6</div>
+                <div class="flex-item item-width-150 background-color-7  item-height-100">E 7</div>
+                <div class="flex-item item-width-150 background-color-8  item-height-60">E 8</div>
+                <div class="flex-item item-width-150 background-color-9  item-height-90">E 9</div>
+                <div class="flex-item item-width-150 background-color-10 item-height-90">E 10</div>
+                <div class="flex-item item-width-150 background-color-11 item-height-100">E 11</div>
+                <div class="flex-item item-width-150 background-color-12 item-height-60">E 12</div>
+                <div class="flex-item item-width-150 background-color-13 item-height-90">E 13</div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>center</h3>    
+            <ul>
+                <li>La distancia entre el elemento flexible y los bordes de la línea flexible que son paralelos a los lados del eje transversal, es el mismo.</li>
+            </ul>
+            <h3 class="titulo">REGLA CSS</h3>
+            <div class="resumen">
+                <div class="html">
+                    <pre>&lt;div class="contenedor"&gt;<br>   &lt;div&gt;E1&lt;/div&gt;<br>   &lt;div&gt;E2&lt;/div&gt;<br>   &lt;div&gt;E3&lt;/div&gt;<br>   &lt;div&gt;E4&lt;/div&gt;<br>   &lt;div&gt;E5&lt;/div&gt;<br>&lt;/div&gt;</pre>
+                </div>
+                <div class="css">
+                    <pre>.contenedor{<br>   display: flex;<br>   flex-direction: row;<br>   flex-wrap: wrap;<br>   align-content: flex-start;<br>   justify-content: space-around;<br>   <strong class="importante">align-items: center; </strong><br>}</pre>
+                </div>
+                <div class="img">
+                    <img src="img/ai-c.png" alt="" class="img-fluid">
+                </div>
+            </div>
+           
+            <h3 class="titulo">EJEMPLO</h3>
+            <div class="flex-container container-background-color fc-ai-3">
+                <div class="flex-item item-width-150 background-color-1  item-height-50">E 1</div>
+                <div class="flex-item item-width-150 background-color-2  item-height-100">E 2</div>
+                <div class="flex-item item-width-150 background-color-3  item-height-60">E 3</div>
+                <div class="flex-item item-width-150 background-color-4  item-height-70">E 4</div>
+                <div class="flex-item item-width-150 background-color-5  item-height-50">E 5</div>
+                <div class="flex-item item-width-150 background-color-6  item-height-90">E 6</div>
+                <div class="flex-item item-width-150 background-color-7  item-height-100">E 7</div>
+                <div class="flex-item item-width-150 background-color-8  item-height-60">E 8</div>
+                <div class="flex-item item-width-150 background-color-9  item-height-90">E 9</div>
+                <div class="flex-item item-width-150 background-color-10 item-height-90">E 10</div>
+                <div class="flex-item item-width-150 background-color-11 item-height-100">E 11</div>
+                <div class="flex-item item-width-150 background-color-12 item-height-60">E 12</div>
+                <div class="flex-item item-width-150 background-color-13 item-height-90">E 13</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
